@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 페이지</title>
+</head>
+<body>
+
+<h1 th:text="${board.title}">제목입니다.</h1>
+<p th:text="${board.content}">내용이 들어갈 부분입니다.</p>
+<a th:href="@{${board.filepath}}">다운받기</a>
+<a th:href="@{/board/modify/{id}(id = ${board.id})}">수정</a>
+</body>
+</html>
